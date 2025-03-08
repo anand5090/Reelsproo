@@ -78,7 +78,7 @@ export default function VideoUploadForm() {
         <label className="label">Title</label>
         <input
           type="text"
-          className={`input input-bordered ${
+          className={`input input-bordered text-amber-600 ${
             errors.title ? "input-error" : ""
           }`}
           {...register("title", { required: "Title is required" })}
@@ -93,7 +93,7 @@ export default function VideoUploadForm() {
       <div className="form-control">
         <label className="label">Description</label>
         <textarea
-          className={`textarea textarea-bordered h-24 ${
+          className={`textarea textarea-bordered text-amber-600 h-24 ${
             errors.description ? "textarea-error" : ""
           }`}
           {...register("description", { required: "Description is required" })}
