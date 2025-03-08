@@ -60,7 +60,7 @@ export default function Header() {
                     <li>
                       <Link
                         href="/upload"
-                        className="px-4 py-2 hover:bg-base-200 block w-full"
+                        className="px-4 py-2 hover:bg-base-200 block w-full text-amber-500 font-semibold"
                         onClick={() =>
                           showNotification("Welcome to Admin Dashboard", "info")
                         }
@@ -72,7 +72,7 @@ export default function Header() {
                     <li>
                       <button
                         onClick={handleSignOut}
-                        className="px-4 py-2 text-error hover:bg-base-200 w-full text-left"
+                        className="px-4 py-2 hover:bg-base-200 w-full text-left text-amber-500 font-semibold"
                       >
                         Sign Out
                       </button>
@@ -82,7 +82,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/login"
-                      className="px-4 py-2 hover:bg-base-200 block w-full"
+                      className="px-4 py-2 hover:bg-base-200 block w-full text-amber-500 font-semibold"
                       onClick={() =>
                         showNotification("Please sign in to continue", "info")
                       }
@@ -90,7 +90,8 @@ export default function Header() {
                       Login
                     </Link>
                   </li>
-                )}
+                )} 
+
               </ul>
             </div>
           </div>
