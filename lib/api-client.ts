@@ -4,7 +4,7 @@ export type VideoFormData = Omit<IVideo, "_id">;
 
 type FetchOptions = {
   method?: "GET" | "POST" | "PUT" | "DELETE";
-  body?: Record<string, any>;
+  body?: any;
   headers?: Record<string, string>;
 };
 
