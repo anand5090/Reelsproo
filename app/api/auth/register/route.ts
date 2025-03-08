@@ -1,6 +1,5 @@
 import { connectToDatabase } from "@/lib/db";
 import User from "@/models/User";
-import { error } from "console";
 import { NextRequest, NextResponse } from "next/server";
 
 
@@ -25,7 +24,7 @@ export async function POST(request: NextRequest) {
          )
      }
 
-     User.create({
+     await User.create({
         email,
         password
      });
@@ -36,6 +35,7 @@ export async function POST(request: NextRequest) {
     )
 
     } catch (error) {
+        console.error("Error in POST /api/register:", error);
         return NextResponse.json(
             {error:"User already exists"},
             {status:500}

@@ -6,7 +6,7 @@ import { NotificationProvider } from "./Notification";
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT!;
 const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY!;
-const privateKey = process.env.IMAGEKIT_PRIVATE_KEY!;
+//const privateKey = process.env.IMAGEKIT_PRIVATE_KEY!;
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const authenticator = async () => {

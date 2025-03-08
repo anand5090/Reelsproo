@@ -38,6 +38,7 @@ export const authOptions: NextAuthOptions = {
             email: user.email,
           };
         } catch (error) {
+          console.error("Error in authorize:", error);
           throw new Error("An error occurred");
         }
       },

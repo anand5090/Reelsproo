@@ -1,7 +1,6 @@
 import { authOptions } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/db";
 import Video, { IVideo } from "@/models/Video";
-import { create } from "domain";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -14,6 +13,7 @@ export async function GET() {
     }
     return NextResponse.json(videos);
   } catch (error) {
+    console.error("Error in GET /api/videos:", error);
     return NextResponse.json(
       { error: "Failed to fetch videos" },
       { status: 500 }
@@ -56,6 +56,7 @@ export async function POST(request: NextRequest) {
     const newVideo = await Video.create(videoData);
     return NextResponse.json(newVideo);
   } catch (error) {
+    console.error("Error in POST /api/videos:", error);
     return NextResponse.json(
       { error: "Failed to create video" },
       { status: 200 }
