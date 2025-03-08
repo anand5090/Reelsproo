@@ -79,10 +79,10 @@ export default function Header() {
                     </li>
                   </>
                 ) : (
-                  <li>
+                  <li className="px-[10px]">
                     <Link
                       href="/login"
-                      className="block w-full px-4 py-2 text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300"
+                      className="block w-full px-4 py-2 text-center text-white bg-amber-500 rounded-lg hover:bg-blue-700 transition duration-300"
                       onClick={() =>
                         showNotification("Please sign in to continue", "info")
                       }
