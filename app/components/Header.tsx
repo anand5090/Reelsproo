@@ -50,7 +50,7 @@ export default function Header() {
               >
                 {session ? (
                   <>
-                    <li className="px-4 py-1">
+                    <li className="">
                       <span className="text-sm opacity-70 text-amber-500 font-semibold">
                         {session.user?.email?.split("@")[0]}
                       </span>
