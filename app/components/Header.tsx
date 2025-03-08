@@ -51,7 +51,7 @@ export default function Header() {
                 {session ? (
                   <>
                     <li className="px-4 py-1">
-                      <span className="text-sm opacity-70">
+                      <span className="text-sm opacity-70 text-amber-900 font-semibold">
                         {session.user?.email?.split("@")[0]}
                       </span>
                     </li>
@@ -72,7 +72,7 @@ export default function Header() {
                     <li>
                       <button
                         onClick={handleSignOut}
-                        className="px-4 py-2 hover:bg-base-200 w-full text-left text-amber-500 font-semibold"
+                        className="px-4 py-2 text-amber-900 font-semibold hover:bg-base-200 w-full text-left"
                       >
                         Sign Out
                       </button>
@@ -82,7 +82,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/login"
-                      className="px-4 py-2 hover:bg-base-200 block w-full text-amber-500 font-semibold"
+                      className="px-4 py-2 hover:bg-base-200 block w-full"
                       onClick={() =>
                         showNotification("Please sign in to continue", "info")
                       }
